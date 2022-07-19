@@ -8,7 +8,10 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/server.js"
+            "program": "${workspaceFolder}/app.js",
+            "args": [
+                "https://static.srv1-rgmtrv.duckdns.org/transfer.sh"
+            ]
         }
     ]
 }
