@@ -19,7 +19,6 @@ async function walker(root, folder_root) {
     const html = (
         await axios.get(root, {
             transformResponse: res => {
-                // Do your own parsing here if needed ie JSON.parse(res);
                 return res;
             },
         })
@@ -49,11 +48,6 @@ async function walker(root, folder_root) {
 async function run(link, folder_root) {
     return walker(link, folder_root);
 }
-
-// run();
-// run("https://tenshi.spb.ru/anime-ost/Lucky_Star/", "./")
-//     .then(x => console.log(JSON.stringify(x)))
-//     .catch(err => console.error(err));
 
 const [link, folderRoot] = args;
 
